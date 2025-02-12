@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Custom range input styling */
+  input[type="range"] {
+    @apply appearance-none bg-gray-600 h-2 rounded-lg;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 rounded-full bg-blue-500 cursor-pointer hover:bg-blue-400 transition-colors;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    @apply appearance-none w-4 h-4 rounded-full bg-blue-500 cursor-pointer hover:bg-blue-400 transition-colors border-none;
+  }
+
+  /* Custom scrollbar for subtitle container */
+  .space-y-2::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .space-y-2::-webkit-scrollbar-track {
+    @apply bg-gray-700 rounded-full;
+  }
+
+  .space-y-2::-webkit-scrollbar-thumb {
+    @apply bg-gray-500 rounded-full hover:bg-gray-400 transition-colors;
+  }
+}
+
+.subtitle-container {
+  position: relative;
+  min-height: 200px;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.subtitle-item {
+  position: absolute;
+  width: calc(100% - 2rem);
+  left: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subtitle-item p {
+  margin: 0;
+  line-height: 1.5;
+}
