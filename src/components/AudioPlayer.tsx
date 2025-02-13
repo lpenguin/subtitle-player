@@ -192,7 +192,7 @@ export const AudioPlayer = () => {
           <label className="flex items-center justify-center w-full p-4 border-2 border-dashed border-gray-400 rounded-lg cursor-pointer hover:border-gray-500">
             <input
               type="file"
-              accept="audio/*"
+              accept=".mp3,.m4a,.aac,.wav,audio/*"
               onChange={handleAudioUpload}
               className="hidden"
             />
